@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "SlashCommand(/sp.constitution)",
+      "SlashCommand(/sp.phr --title \"Initial Constitution Setup\" --stage constitution)",
+      "Bash(.specify/scripts/bash/create-phr.sh:*)",
+      "Bash(git fetch:*)",
+      "Bash(ls:*)",
+      "Bash('''.specify/scripts/powershell/create-new-feature.ps1 -Json \"\"Book on Physical AI & Humanoid Robotics\n\nTarget audience:\n- Undergraduate CS/AI/Robotics students\n- Early-career robotics engineers\n- AI developers transitioning into embodied intelligence and humanoid robotics\n- Educators building Physical AI curriculum\n\nFocus:\n- Teaching Physical AI concepts through ROS 2, Gazebo, Unity, NVIDIA Isaac, and Vision-Language-Action (VLA)\n- Bridging digital AI (LLMs, perception, simulation) with embodied systems (humanoids, sensors, locomotion)\n- End-to-end pipeline: Simulation → Perception → Planning → Control → Deployment\n\nSuccess criteria:\n- Covers all modules and weekly breakdown from the course (Weeks 1–13)\n- Explains core systems: ROS 2, Gazebo, Unity, Isaac Sim, Isaac ROS, Nav2, Whisper, GPT-based reasoning\n- Includes 15+ diagrams (architecture, pipelines, sensor flows, robot URDF/TF trees)\n- Provides sample ROS 2 code, launch files, and minimal reproducible examples\n- Describes hardware requirements with up-to-date and accurate specs\n- Defines the complete Capstone: Autonomous Humanoid (Voice → Plan → Navigate → Identify → Manipulate)\n- Book is export-ready for Docusaurus GitHub Pages deployment\n\nConstraints:\n- Format: Markdown (Docusaurus-ready, with frontmatter)\n- Minimum 12 chapters mapped to course modules\n- All technical claims must be aligned with official ROS 2, Gazebo, Unity, NVIDIA Isaac documentation\n- Code examples must target Ubuntu 22.04 + ROS 2 Humble or Iron\n- No fictional hardware or unsupported robotics features\n- Avoid speculative or future technologies not available today\n- All diagrams must be structurally accurate (even if rendered later by Claude Code)\n- Timeline: Entire book must be generatable and iterative within the hackathon period (3 days)\n\nNot building:\n- A hands-on robotics lab manual with step-by-step physical robot assembly\n- A university research thesis or academic literature review\n- A full reinforcement learning textbook\n- A full computer vision or SLAM textbook (only course-relevant sections)\n- A deep dive into humanoid biomechanics beyond course scope\"\" -Number 1 -ShortName \"\"physical-ai-book\"\"' ')",
+      "Bash(pwsh -Command:*)",
+      "Bash(powershell.exe -Command:*)",
+      "Bash(mkdir:*)",
+      "Bash(cat:*)",
+      "Bash(chmod:*)",
+      "Bash(./create_spec.sh:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(npx create-docusaurus@latest:*)",
+      "WebSearch",
+      "SlashCommand(/sp.phr --title \"Acknowledging MCP reconnection\" --stage general)",
+      "Bash(.specify/scripts/powershell/check-prerequisites.ps1:*)",
+      "Bash(npm start)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
