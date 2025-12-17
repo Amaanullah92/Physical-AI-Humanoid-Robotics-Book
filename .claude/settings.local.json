@@ -18,7 +18,8 @@
       "WebSearch",
       "SlashCommand(/sp.phr --title \"Acknowledging MCP reconnection\" --stage general)",
       "Bash(.specify/scripts/powershell/check-prerequisites.ps1:*)",
-      "Bash(npm start)"
+      "Bash(npm start)",
+      "SlashCommand(/sp.phr:*)"
     ],
     "deny": [],
     "ask": []

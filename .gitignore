@@ -43,3 +43,7 @@ out/
 Dockerfile*
 .dockerignore
 coverage/
+
+# Gemini Agent Specific
+.gemini/
+GEMINI.md
