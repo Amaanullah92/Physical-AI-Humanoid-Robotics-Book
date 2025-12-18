@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 interface Message {
     id: number;
@@ -7,6 +8,9 @@ interface Message {
 }
 
 const ChatWidget = () => {
+    const {siteConfig} = useDocusaurusContext();
+    const chatbotApiUrl = siteConfig.customFields?.chatbotApiUrl as string || 'http://localhost:8000';
+
     const [query, setQuery] = useState('');
     const [messages, setMessages] = useState<Message[]>([]);
     const [selectedTextOnly, setSelectedTextOnly] = useState(false);
@@ -42,7 +46,7 @@ const ChatWidget = () => {
         }
 
         try {
-            const response = await fetch('http://localhost:8000/query', {
+            const response = await fetch(`${chatbotApiUrl}/query`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
