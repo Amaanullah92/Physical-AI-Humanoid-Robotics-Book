@@ -7,3 +7,4 @@ loguru
 tiktoken
 qdrant-client
 cohere
+openai
