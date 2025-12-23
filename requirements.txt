@@ -6,3 +6,4 @@ beautifulsoup4
 loguru
 tiktoken
 qdrant-client
+cohere
