@@ -23,7 +23,9 @@ jobs:
 
       - name: Install dependencies
         working-directory: docs
-        run: npm ci
+        run: |
+          npm cache clean --force
+          npm ci
 
       - name: Configure API URL and Build Website
         working-directory: docs
