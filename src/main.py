@@ -24,7 +24,7 @@ app.add_middleware(
 
 security = HTTPBearer()
 
-logger.add("logs/app.log", rotation="500 MB")
+logger.add("/tmp/app.log", rotation="500 MB")
 
 @app.exception_handler(Exception)
 async def unhandled_exception_handler(request: Request, exc: Exception):
