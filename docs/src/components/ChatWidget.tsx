@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 interface Message {
     id: number;
@@ -8,8 +7,7 @@ interface Message {
 }
 
 const ChatWidget = () => {
-    const {siteConfig} = useDocusaurusContext();
-    const chatbotApiUrl = siteConfig.customFields?.chatbotApiUrl as string || 'http://localhost:8000';
+    const chatbotApiUrl = 'https://physical-ai-humanoid-robotics-book-lilac-two.vercel.app';
 
     const [query, setQuery] = useState('');
     const [messages, setMessages] = useState<Message[]>([]);
