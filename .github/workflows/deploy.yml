@@ -27,9 +27,9 @@ jobs:
 
       - name: Build website
         working-directory: docs
-        env:
-          CHATBOT_API_URL: https://physical-ai-humanoid-robotics-book-lilac-two.vercel.app/
-        run: npm run build
+        run: |
+          sed -i "s|process.env.CHATBOT_API_URL || 'http://localhost:8000'|'https://physical-ai-humanoid-robotics-book-lilac-two.vercel.app'|" docusaurus.config.js
+          npm run build
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
