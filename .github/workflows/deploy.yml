@@ -25,10 +25,10 @@ jobs:
         working-directory: docs
         run: npm ci
 
-      - name: Build website
+      - name: Configure API URL and Build Website
         working-directory: docs
         run: |
-          sed -i "s#process.env.CHATBOT_API_URL || 'http://localhost:8000'#'https://physical-ai-humanoid-robotics-book-lilac-two.vercel.app'#" docusaurus.config.js
+          node -e "const fs = require('fs'); const path = 'docusaurus.config.js'; const data = fs.readFileSync(path, 'utf8'); const result = data.replace(/process.env.CHATBOT_API_URL ?\|\| ?'http:\/\/localhost:8000'/, \"'https://physical-ai-humanoid-robotics-book-lilac-two.vercel.app'\"); fs.writeFileSync(path, result, 'utf8');"
           npm run build
 
       - name: Upload Build Artifact
