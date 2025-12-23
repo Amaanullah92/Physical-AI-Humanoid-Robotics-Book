@@ -27,6 +27,8 @@ jobs:
 
       - name: Build website
         working-directory: docs
+        env:
+          CHATBOT_API_URL: https://physical-ai-humanoid-robotics-book-lilac-two.vercel.app/
         run: npm run build
 
       - name: Upload Build Artifact
